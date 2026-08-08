@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Timetable</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    th,
+    td {
+      border: 1px solid black;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .lunch {
+      background-color: #e0e0e0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table>
+    <tr>
+      <th>Sr. No.</th>
+      <th>TIME</th>
+      <th>MONDAY</th>
+      <th>TUESDAY</th>
+      <th>WEDNESDAY</th>
+      <th>THURSDAY</th>
+      <th>FRIDAY</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>09:30 to 10:30</td>
+      <td rowspan="2">A<br>DMS<br>RA<br>MC309</td>
+      <td rowspan="2">DMS - RA<br>PG35HA</td>
+      <td rowspan="2">DS - CB<br>PG35HA</td>
+      <td rowspan="3">LIBRARY</td>
+      <td rowspan="2">B<br>PS<br>KMT<br>MB301</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>10:30 to 11:30</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>11:30 to 12:30</td>
+      <td>QLA-BK<br>PG3SHA</td>
+      <td>DS-CB <br>PG35HA</td>
+      <td>DMS-RA <br>PG35HA</td>
+      <td>PS-KMT <br>MB206</td>
+    </tr>
+    <tr class="LUNCH">
+      <td colspan="7">12:30 to 01:30 ---- LUNCH BREAK</td>
+    </tr>
+    <tr>
+      <td> 4</td>
+
+      <td>01:30 to 2:30</td>
+      <td>AJT-AS <br>MB301</td>
+      <td rowspan="2">A<br>WT<br>JD<br>MC213</td>
+      <td rowspan="2">A<br>DS<br>CB<br>MC213</td>
+      <td>AJT-AS <br>MB308</td>
+      <td>AJT-AS <br>MB206</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>02:30 to 03:25</td>
+      <td>WT-JR <br>MB301</td>
+      <td>-</td>
+      <td>WT-JR <br>MA206</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>03:25 to 04:20</td>
+      <td>PS-KMT <br>MB301</td>
+      <td>WT-JR <br>MA206</td>
+      <td>LIBRARY</td>
+      <td colspan="1">A<br>AJT<br>SK<br>MC214</td>
+      <td>LIBRARY</td>
+    </tr>
+  </table>
+</body>
+
+</html>
