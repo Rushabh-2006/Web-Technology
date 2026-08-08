@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Student Registration Form</title>
+</head>
+
+<body>
+
+    <form action="/submit_registration" method="post">
+        <table border="1" cellpadding="10" cellspacing="0" align="center">
+            <tr>
+                <th colspan="2" align="center"> Student Registration Form</th>
+            </tr>
+            <tr>
+                <td><label for="fullname">Full Name:</label></td>
+                <td><input type="text" id="fullname" name="fullname" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="Mobile No">Mobile No:</label></td>
+                <td><input type="tel" id="Mobile" name="Mobile" required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label><br></td>
+                <td><textarea id="address" name="address" rows="4" cols="30" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="Nationality">Nationality:</label><br></td>
+                <td><input type="nationality" id="Nationality" name="Nationality" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="dob">Date of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="Highest Degree">Select Degree:</label></td>
+                <td>
+                    <select id="Degree" name="Degree" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="10">10th</option>
+                        <option value="12">12th</option>
+                        <option value="Bachelor's">Graduation</option>
+                        <option value="Master's">Post Graduation</option>
+                        <option value="phD">phD</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="CPI">CPI:</label><br></td>
+                <td><input type="CPI" id="CPI" name="CPI" required></td>
+            </tr>
+            <tr>
+                <td><label for="University">University:</label><br></td>
+                <td><input type="University" id="University" name="University" required></td>
+            </tr>
+            <tr>
+                <td><label for="Passing Year ">Select Your Passing Year:</label></td>
+                <td>
+                    <select id="Passing Year" name="Passing Year" required>
+                        <option value="">--Select Your Passing Year--</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center>
+                        <input type="submit" value="Submit" align="center">
+                        <input type="reset" value="Reset">
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
