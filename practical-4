@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Marwadi University - Rajkot</title>
+ <style>
+ body {
+ font-family: 'Inter', sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: #f0f2f5;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ }
+ .header {
+ background-color: #35adee;
+ color: white;
+ padding: 15px 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ .header-title {
+ font-size: 1.5rem;
+ font-weight: 600;
+ }
+ .nav-links {
+ display: flex;
+ gap: 25px;
+ }
+ .nav-links a {
+ color: white;
+ text-decoration: none;
+ font-weight: 400;
+ transition: color 0.3s ease;
+ }
+ .nav-links a:hover {
+ color: #76eebe;
+ }
+ .main-container {
+ display: flex;
+ flex: 1;
+ width: 100%;
+ }
+ .sidebar {
+ background-color: red;
+ color: white;
+ width: 250px;
+ padding: 20px 0;
+ box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+ display: flex;
+ flex-direction: column;
+ border-top-right-radius: 8px;
+ border-bottom-right-radius: 8px;
+ }
+ .sidebar-item {
+ display: flex;
+ align-items: center;
+ padding: 15px 20px;
+ margin-bottom: 5px;
+ cursor: pointer;
+ transition: background-color 0.3s ease;
+ border-radius: 0 25px 25px 0;
+ }
+ .sidebar-item:hover {
+ background-color: #c62828;
+ }
+ .sidebar-item i {
+ margin-right: 15px;
+ font-size: 1.2rem;
+ }
+ .sidebar-item span {
+ font-size: 1.1rem;
+ font-weight: 400;
+ }
+ .content-area {
+ flex: 1;
+ padding: 30px;
+ display: flex;
+ flex-direction: column;
+ gap: 30px;
+ }
+ .section-title {
+ font-size: 1.8rem;
+ font-weight: 700;
+ color: #333;
+ margin-bottom: 20px;
+ }
+ .placement-cards-container {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 25px;
+ }
+ .placement-card {
+ background-color: white;
+ border-radius: 12px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+ padding: 25px;
+ width: 280px;
+ text-align: center;
+ transition: transform 0.3s ease, box-shadow 0.3s ease;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ }
+ .placement-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+ }
+ .placement-card-header {
+ font-size: 1.1rem;
+ font-weight: 600;
+ color: #555;
+ margin-bottom: 15px;
+ padding-bottom: 10px;
+ border-bottom: 1px solid #eee;
+ width: 100%;
+ }
+ .placement-card-name {
+ font-size: 1.4rem;
+ font-weight: 700;
+ color: #002d62;
+ margin-bottom: 8px;
+ }
+ .placement-card-company {
+ font-size: 1rem;
+ color: #666;
+ margin-bottom: 15px;
+ }
+ .placement-card-package {
+ font-size: 1.1rem;
+ font-weight: 600;
+ color: blueviolet;
+ }
+ @media (max-width: 1024px) {
+ .sidebar {
+ width: 200px;
+ }
+ .header-title {
+ font-size: 1.3rem;
+ }
+ .nav-links {
+ gap: 15px;
+ }
+ .placement-card {
+ width: calc(50% - 20px);
+ }
+ }
+ @media (max-width: 768px) {
+ .header {
+ flex-direction: column;
+ padding: 10px;
+ }
+ .nav-links {
+ margin-top: 10px;
+ flex-wrap: wrap;
+ justify-content: center;
+ gap: 10px;
+ }
+ .main-container {
+ flex-direction: column;
+ }
+ .sidebar {
+ width: 100%;
+ flex-direction: row;
+ justify-content: space-around;
+ padding: 10px 0;
+ border-radius: 0;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+ .sidebar-item {
+ padding: 10px 15px;
+ margin-bottom: 0;
+ border-radius: 8px;
+ }
+ .sidebar-item span {
+ display: none;
+ }
+ .sidebar-item i {
+ margin-right: 0;
+ }
+ .content-area {
+ padding: 20px;
+ }
+ .placement-card {
+ width: 100%;
+ }
+ }
+ @media (max-width: 480px) {
+ .header-title {
+ font-size: 1.1rem;
+ }
+ .nav-links a {
+ font-size: 0.9rem;
+ }
+ .sidebar-item {
+ font-size: 0.9rem;
+ }
+ .section-title {
+ font-size: 1.5rem;
+ }
+ }
+ </style>
+</head>
+<body>
+ <header class="header">
+ <div class="header-title">Marwadi University - Rajkot</div>
+ <nav class="nav-links">
+ <a href="#">Home</a>
+ <a href="#">About</a>
+ <a href="#">Contact</a>
+ <a href="#">Login</a>
+ </nav>
+ </header>
+ <div class="main-container">
+ <aside class="sidebar">
+ <div class="sidebar-item">
+ <i class="fas fa-home"></i>
+ <span>Home</span>
+ </div>
+ <div class="sidebar-item">
+ <i class="fas fa-briefcase"></i>
+ <span>Placement</span>
+ </div>
+ <div class="sidebar-item">
+ <i class="fas fa-user-friends"></i>
+ <span>Recruitment</span>
+ </div>
+ <div class="sidebar-item">
+ <i class="fas fa-users"></i>
+ <span>Faculty</span>
+ </div>
+ <div class="sidebar-item">
+ <i class="fas fa-newspaper"></i>
+ <span>News</span>
+ </div>
+ </aside>
+ <main class="content-area">
+ <h2 class="section-title">Recent Placements</h2>
+ <div class="placement-cards-container">
+ <div class="placement-card">
+ <div class="placement-card-header">Profile</div>
+ <div class="placement-card-name">Rushabh Tolia</div>
+ <div class="placement-card-company">Goldman Sachs</div>
+ <div class="placement-card-package">Package: ₹20 LPA</div>
+ </div>
+ <div class="placement-card">
+ <div class="placement-card-header">Profile</div>
+ <div class="placement-card-name">Raj Patel</div>
+ <div class="placement-card-company">J.P.Morgan</div>
+ <div class="placement-card-package">Package: ₹18 LPA</div>
+ </div>
+ </div>
+ </main>
+ </div>
+</body>
+</html>
