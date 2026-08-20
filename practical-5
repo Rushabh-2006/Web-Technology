@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Marwadi University - Department of Computer Engineering</title>
+ <style>
+ body {
+ font-family: 'Inter', sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: #f0f2f5;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ }
+ .header {
+ background-color: #002d62;
+ color: white;
+ padding: 20px 0;
+ text-align: center;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ .header h1 {
+ margin: 0;
+ font-size: 2.2rem;
+ font-weight: 700;
+ }
+ .header p {
+ margin: 5px 0 0;
+ font-size: 1.2rem;
+ font-weight: 400;
+ }
+ .navbar {
+ background-color: #004080; /* Slightly lighter blue for navbar */
+ padding: 15px 0;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+ .navbar-links {
+ display: flex;
+ justify-content: center;
+ gap: 40px;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ }
+ .navbar-links a {
+ color: white;
+ text-decoration: none;
+ font-weight: 600;
+ font-size: 1.1rem;
+ padding: 5px 0;
+ transition: color 0.3s ease, border-bottom 0.3s ease;
+ }
+ .navbar-links a:hover {
+ color: #a0c4ff;
+ border-bottom: 2px solid #a0c4ff;
+ }
+ .content-section {
+ background-color: white;
+ margin: 25px auto;
+ padding: 30px;
+ border-radius: 12px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+ max-width: 900px;
+ width: 90%;
+ }
+ .content-section h2 {
+ font-size: 1.8rem;
+ color: #002d62;
+ margin-bottom: 15px;
+ border-bottom: 2px solid #eee;
+ padding-bottom: 10px;
+ }
+ .content-section p, .content-section ul {
+ font-size: 1rem;
+ line-height: 1.6;
+ color: #333;
+ }
+ .content-section ul {
+ list-style-type: disc;
+ margin-left: 20px;
+ padding-left: 0;
+ }
+ .content-section ul li {
+ margin-bottom: 8px;
+ }
+ .program-outcomes ol {
+ list-style-type: decimal;
+ margin-left: 20px;
+ padding-left: 0;
+ }
+ .program-outcomes ol li {
+ margin-bottom: 8px;
+ }
+ .top-recruiters ul {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+ gap: 10px;
+ list-style: none;
+ padding: 0;
+ }
+ .top-recruiters ul li {
+ background-color: #f9f9f9;
+ padding: 8px 12px;
+ border-radius: 6px;
+ border: 1px solid #eee;
+ text-align: center;
+ font-weight: 500;
+ color: #555;
+ }
+ .footer {
+ background-color: #002d62;
+ color: white;
+ text-align: center;
+ padding: 20px 0;
+ margin-top: auto; /* Pushes footer to the bottom */
+ font-size: 0.9rem;
+ }
+ /* Responsive Design */
+ @media (max-width: 768px) {
+ .header h1 {
+ font-size: 1.8rem;
+ }
+ .header p {
+ font-size: 1rem;
+ }
+ .navbar-links {
+ flex-wrap: wrap;
+ gap: 20px;
+ padding: 10px;
+ }
+ .navbar-links a {
+ font-size: 1rem;
+ }
+ .content-section {
+ margin: 20px auto;
+ padding: 20px;
+ width: 95%;
+ }
+ .content-section h2 {
+ font-size: 1.5rem;
+ }
+ .content-section p, .content-section ul li {
+ font-size: 0.95rem;
+ }
+ .top-recruiters ul {
+ grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+ }
+ }
+ @media (max-width: 480px) {
+ .header h1 {
+ font-size: 1.5rem;
+ }
+ .header p {
+ font-size: 0.9rem;
+ }
+ .navbar-links {
+ flex-direction: column;
+ gap: 10px;
+ }
+ .navbar-links a {
+ padding: 8px 0;
+ border-bottom: none;
+ }
+ .navbar-links a:hover {
+ border-bottom: none;
+ background-color: rgba(255, 255, 255, 0.1);
+ border-radius: 5px;
+ }
+ .content-section {
+ padding: 15px;
+ }
+ .content-section h2 {
+ font-size: 1.3rem;
+ }
+ }
+ </style>
+</head>
+<body>
+ <header class="header">
+ <h1>Marwadi University</h1>
+ <p>Department of Computer Engineering</p>
+ </header>
+ <nav class="navbar">
+ <ul class="navbar-links">
+ <li><a href="#">Vision</a></li>
+ <li><a href="#">Mission</a></li>
+ <li><a href="#">Program Specific Outcomes</a></li>
+ <li><a href="#">Courses Offered</a></li>
+ <li><a href="#">Top Recruiters</a></li>
+ </ul>
+ </nav>
+ <main>
+ <section class="content-section">
+ <h2>Vision</h2>
+ <p>To impart quality technical education through research, innovation, and teamwork for 
+creating professionally superior and ethically strong manpower that meets the global 
+challenges of engineering industries and research organizations.</p>
+ </section>
+ <section class="content-section">
+ <h2>Mission</h2>
+ <ul>
+ <li>Maintain state-of-the-art ICT enabled teaching and learning methodologies.</li>
+ <li>Prepare graduates to become digital age literates, innovators, and 
+professionals.</li>
+ <li>Provide quality knowledge and skill-based services as engineers, leaders, and 
+entrepreneurs.</li>
+<li>Prepare graduates for lifelong learning and career challenges.</li>
+ </ul>
+ </section>
+ <section class="content-section program-outcomes">
+ <h2>Program Specific Outcomes (PSOs)</h2>
+ <ol>
+ <li>Apply knowledge and competence in the design and development of computer￾based systems addressing industrial and social needs.</li>
+ <li>Adapt to emerging technological advancements including cybersecurity, AI & ML 
+and IoT.</li>
+ </ol>
+ </section>
+ <section class="content-section">
+ <h2>Courses Offered</h2>
+ <ul>
+ <li>B. Tech in Computer Engineering</li>
+ <li>B. Tech in Cyber Security</li>
+ <li>M. Tech in Computer Engineering</li>
+ <li>Ph.D. in Computer Science & Engineering</li>
+ </ul>
+ </section>
+ <section class="content-section top-recruiters">
+ <h2>Top Recruiters</h2>
+ <ul>
+ <li>Capegemini</li>
+ <li>Infosys</li>
+ <li>Goldman Sachs</li>
+ <li>Amazon</li>
+ <li>Google</li>
+ <li>Cognizant</li>
+ <li>J.P.Morgan</li>
+ </ul>
+ </section>
+ </main>
+ <footer class="footer">
+ © 2025 Marwadi University - Department of Computer Engineering
+ </footer>
+</body>
+</html>
