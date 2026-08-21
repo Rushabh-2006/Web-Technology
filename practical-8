@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Accordion Dashboard</title>
+ <link 
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+rel="stylesheet">
+</head>
+<body>
+ <div class="container my-5">
+ <div class="accordion" id="dashboardAccordion">
+ <!-- Cards Section -->
+ <div class="accordion-item">
+ <h2 class="accordion-header" id="headingOne">
+ <button class="accordion-button" type="button" data-bs-toggle="collapse"
+ data-bs-target="#collapseOne" aria-expanded="true" aria￾controls="collapseOne">
+ Cards
+ </button>
+ </h2>
+ <div id="collapseOne" class="accordion-collapse collapse show" aria￾labelledby="headingOne"
+ data-bs-parent="#dashboardAccordion">
+ <div class="accordion-body">
+ <div class="card" style="width: 200px;">
+ <img src="images/cartoon image.jpeg" class="card-img-top" 
+height="100px" width="100px" />
+ <div class="card-body">
+ <h5 class="card-title" card-title></h5>
+ <p class="card-text">This is simple text</p>
+ <button type="button" class="btn btn-primary">Primary 
+Button</button>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="container my-5">
+ <div class="accordion" id="dashboardAccordion">
+ <!-- Cards Section -->
+ <div class="accordion-item">
+ <h2 class="accordion-header" id="headingTwo">
+ <button class="accordion-button" type="button" data-bs-toggle="collapse"
+ data-bs-target="#collapseTwo" aria-expanded="true" aria￾controls="collapseTwo">
+ alert
+ </button>
+ </h2>
+ <div id="collapseTwo" class="accordion-collapse collapse show" aria￾labelledby="headingTwo"
+ data-bs-parent="#dashboardAccordion">
+ <div class="accordion-body">
+ <div class="alert alert-success" role="alert">This is alert</div>
+ <div class="alert alert-warning" role="alert">This is warning</div>
+ <div class="alert alert-danger" role="alert">This is danger</div>
+ <div class="alert alert-info" role="alert">This is info</div>
+ <div class="alert alert-primary" role="alert">This is primary</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container my-5">
+ <div class="accordion" id="dashboardAccordion">
+ <!-- Cards Section -->
+ <div class="accordion-item">
+ <h2 class="accordion-header" id="headingThree">
+ <button class="accordion-button" type="button" data-bs-toggle="collapse"
+ data-bs-target="#collapseThree" aria-expanded="true" aria￾controls="collapseThree">
+ button
+ </button>
+ </h2>
+ <div id="collapseThree" class="accordion-collapse collapse show" aria￾labelledby="headingThree"
+ data-bs-parent="#dashboardAccordion">
+ <div class="accordion-body">
+ <button type="button" class="btn">Click Me!</button>
+ <button type="button" class="btn btn-success btn-sm active">Click 
+Me!</button>
+ <button type="button" class="btn btn-primary btn-lg disabled">Click 
+Me!</button>
+ <button type="button" class="btn btn-warning btn-xl">Click Me!</button>
+ <button type="button" class="btn btn-danger btn-xxl">Click Me!</button>
+ <button type="button" class="btn btn-info">Click Me!</button>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ 
+ <div class="container my-5">
+ <div class="accordion" id="dashboardAccordion">
+ <!-- Cards Section -->
+ <div class="accordion-item">
+ <h2 class="accordion-header" id="headingThree">
+ <button class="accordion-button" type="button" data-bs-toggle="collapse"
+ data-bs-target="#collapseFour" aria-expanded="true" aria￾controls="collapseFour">
+ Table
+ </button>
+ </h2>
+ <div id="collapseFour" class="accordion-collapse collapse show" aria￾labelledby="headingFour"
+ data-bs-parent="#dashboardAccordion">
+ <div class="accordion-body">
+ <table class="table table-bordered">
+ <thead>
+ <th>Name</th>
+ <th>Email</th>
+ <th>Phone No.</th>
+ </thead>
+ <tbody>
+ <tr class="success">
+ <td>Rushabh</td>
+ <td>abc@gmail.com</td>
+ <td>1234567890</td>
+ </tr>
+ <tr class="warning">
+ <td>Vinay</td>
+ <td>def@gmail.com</td>
+ <td>1236987412</td>
+ </tr>
+ <tr class="danger">
+ <td>Manav</td>
+ <td>mnav@gmail.com</td>
+ <td>1254789630</td>
+ </tr>
+ <tr class="info">
+ <td>Akshar</td>
+ <td>xyz@gmail.com</td>
+ <td>1020306050</td>
+ </tr>
+ <tr class="active">
+ <td>Kevin</td>
+ <td>kwin@gmail.com</td>
+ <td>9875321590</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>
+</body>
