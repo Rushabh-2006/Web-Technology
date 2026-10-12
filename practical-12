@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Header with Dropdown - Tailwind CSS (No JS)</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+ 
+ <header class="bg-white shadow-md">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div class="flex justify-between items-center py-4">
+ 
+ <div class="text-2xl font-bold text-blue-600">
+ WT website 
+ </div>
+ 
+ <nav class="hidden md:flex space-x-8 items-center">
+ <a href="#" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+ <a href="#" class="text-gray-700 hover:text-blue-600 transition">About</a>
+ 
+ <div class="relative group">
+ <button class="text-gray-700 hover:text-blue-600 transition flex items-center 
+focus:outline-none">
+ Services
+ <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 
+24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+ d="M19 9l-7 7-7-7" />
+ </svg>
+ </button>
+ <div class="absolute left-0 mt-2 w-40 bg-white border rounded-md shadow-lg 
+opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-
+200 z-10 pointer-events-none group-hover:pointer-events-auto">
+ <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">Web 
+Design</a>
+ <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-50">SEO</a>
+ <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-blue-
+50">Marketing</a>
+ </div>
+ </div>
+ <a href="#" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+ </nav>
+ </div>
+ </div>
+ 
+ <div class="md:hidden border-t border-gray-200 px-4 pb-4">
+ <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+ <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">About</a>
+ 
+ <div class="relative group">
+ <button class="w-full text-left py-2 flex justify-between items-center text-gray-700 
+hover:text-blue-600">
+ Services
+ <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 
+24">
+ <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+ d="M19 9l-7 7-7-7" />
+ </svg>
+ </button>
+ 
+ <div class="pl-4 hidden group-hover:block">
+ <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Web 
+Design</a>
+ <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">SEO</a>
+ <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Marketing</a>
+ </div>
+ </div>
+ <a href="#" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+ </div>
+ </header>
+</body>
+</html>
