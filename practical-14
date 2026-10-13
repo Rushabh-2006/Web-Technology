@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title Quiz App</title>
+ <style>
+ body {
+ background: #f0f4ff;
+ font-family: 'Arial', sans-serif;
+ min-height: 100vh;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ }
+ .quiz-container {
+ background: #fff;
+ width: 330px;
+ padding: 26px;
+ border-radius: 12px;
+ box-shadow: 0 3px 18px #bbc2f7;
+ text-align: center;
+ }
+ h2 {
+ margin-bottom: 20px;
+ color: #31318d;
+ font-weight: 600;
+ font-size: 1.15rem;
+ }
+ .btn {
+ display: block;
+ width: 100%;
+ margin: 10px 0;
+ padding: 10px;
+ background: #dbeafe;
+ color: #2e396d;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ font-size: 1rem;
+ transition: background 0.2s;
+ }
+ .btn.correct {
+ background: #4caf50;
+ color: #fff;
+ }
+ .btn.wrong {
+ background: #f44336;
+ color: #fff;
+ }
+ .btn:disabled {
+ opacity: 0.7;
+ cursor: default;
+ }
+ #message {
+ min-height: 25px;
+ margin-top: 12px;
+ font-size: 1rem;
+ font-weight: 500;
+ color: #1a2059;
+ }
+ #next-btn {
+ background: #4c63e5;
+ color: #fff;
+ display: none;
+ border: none;
+ width: 60%;
+ margin-top: 14px;
+ border-radius: 7px;
+ letter-spacing: 1px;
+ font-size: 1.04rem;
+ font-weight: 600;
+ }
+ </style>
+</head>
+<body>
+ <div class="quiz-container">
+ <h2 id="question">Question text</h2>
+ <div id="answer-buttons"></div>
+ <div id="message"></div>
+ <button id="next-btn" class="btn">Next</button>
+ </div>
+ <script>
+ const questions = [
+ {
+ question: "Full Form of CSS = ?",
+ answers: [
+ { text: "cascaded style sheet", correct: false },
+ { text: "cascading style sheet", correct: true },
+ { text: "cascading styled sheet", correct: false },
+ { text: "cascoded style sheet", correct: false }
+ ] 
+ },
+ {
+ question: "What is a Capital of India?",
+ answers: [
+ { text: "Delhi", correct: true },
+ { text: "Haryana", correct: false },
+ { text: "Hyderabad", correct: false },
+ { text: "Jaipur", correct: false }
+ ]
+ },
+ {
+ question: "Sun rises in the?",
+ answers: [
+ { text: "West", correct: false },
+ { text: "North", correct: false },
+ { text: "East", correct: true },
+ { text: "South", correct: false }
+ ]
+ }
+ ];
+ const questionElement = document.getElementById("question");
+ const answerButtons = document.getElementById("answer-buttons");
+ const nextButton = document.getElementById("next-btn");
+ const messageDiv = document.getElementById("message");
+ let currentQuestionIndex = 0;
+ let score = 0;
+ function startQuiz() {
+ currentQuestionIndex = 0;
+ score = 0;
+ nextButton.innerHTML = "Next";
+ showQuestion();
+ }
+ function showQuestion() {
+ resetState();
+ const currentQuestion = questions[currentQuestionIndex];
+ questionElement.textContent = currentQuestion.question;
+ currentQuestion.answers.forEach(answer => {
+ const button = document.createElement("button");
+ button.textContent = answer.text;
+ button.classList.add("btn");
+ button.onclick = () => selectAnswer(button, answer.correct);
+ answerButtons.appendChild(button);
+ });
+ }
+ function resetState() {
+ nextButton.style.display = "none";
+ messageDiv.textContent = "";
+ while (answerButtons.firstChild) {
+ answerButtons.removeChild(answerButtons.firstChild);
+ }
+ }
+ function selectAnswer(selectedBtn, isCorrect) {
+ const allBtns = answerButtons.querySelectorAll('.btn');
+ allBtns.forEach(btn => btn.disabled = true);
+ if (isCorrect) {
+ selectedBtn.classList.add("correct");
+ messageDiv.textContent = "Correct answer!";
+ score++;
+ } else {
+ selectedBtn.classList.add("wrong");
+ messageDiv.textContent = "Wrong answer!";
+ // Show correct answer
+ allBtns.forEach(btn => {
+ if (questions[currentQuestionIndex].answers.find(a => a.text === 
+btn.textContent).correct) {
+ btn.classList.add("correct");
+ }
+ });
+ }
+ nextButton.style.display = "block";
+ }
+ function showScore() {
+ resetState();
+ questionElement.textContent = "";
+ let msg = `You scored ${score} / ${questions.length}!`;
+ if (score === questions.length) msg += " 🎉Congrats, perfect!";
+ else if (score === 0) msg += " Better luck next time!";
+ else msg += " Well done!";
+ messageDiv.textContent = msg;
+ nextButton.textContent = "Restart";
+ nextButton.style.display = "block";
+ }
+ function handleNextButton() {
+ currentQuestionIndex++;
+ if (currentQuestionIndex < questions.length) {
+ showQuestion();
+ } else {
+ showScore();
+ }
+ }
+ nextButton.addEventListener("click", () => {
+ if (currentQuestionIndex < questions.length) {
+ handleNextButton();
+ } else {
+ startQuiz();
+ }
+ });
+ startQuiz();
+ </script>
+</body>
+</html>
